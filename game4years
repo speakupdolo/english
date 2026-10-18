@@ -1,0 +1,1761 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Misiones de Daniella ✨</title>
+<style>
+:raíz {
+--primario: #ff6b81;
+--primary-dark: #ff4757;
+--secundario: #2ed573;
+--acento: #ffa502;
+--púrpura: #9b59b6;
+--bg-gradient: gradiente lineal(135 grados, #fdfbfb 0%, #ebedee 100%);
+--card-bg: #ffffff;
+--texto: #2f3542;
+}
+
+* {
+box-size: border-box;
+selección del usuario: ninguna;
+-webkit-tap-highlight-color: transparente;
+}
+
+cuerpo {
+familia de fuentes: 'Segoe UI', 'Comic Sans MS', Tahoma, sans-serif;
+fondo: gradiente lineal(135 grados, #ff9a9e 0%, #fecfef 50%, #a1c4fd 100%);
+altura mínima: 100vh;
+color: var(--text);
+alineación de texto: centro;
+margen: 0;
+relleno: 15px;
+desbordamiento-x: oculto;
+}
+
+.contenedor {
+ancho máximo: 540px;
+margen: 0 automático;
+fondo: rgba(255, 255, 255, 0.95);
+relleno: 25px 20px;
+radio de borde: 28px;
+box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+posición: relativa;
+filtro de fondo: desenfoque (10px);
+}
+
+h1 {
+color: var(--primary-dark);
+tamaño de fuente: 2em;
+margen: 0 0 5px 0;
+text-shadow: 1px 1px 0px #ffeaa7;
+}
+
+h2 {
+color: #57606f;
+tamaño de fuente: 1.1em;
+margen superior: 0;
+grosor de fuente: 600;
+}
+
+/* Barra superior */
+.controles-superiores {
+pantalla: flexible;
+justificar-contenido: espacio-entre;
+alinear-elementos: centro;
+margen inferior: 15px;
+}
+
+.btn-small {
+fondo: #f1f2f6;
+borde: 2px sólido #dfe4ea;
+radio de borde: 12px;
+relleno: 8px 12px;
+tamaño de fuente: 0,9em;
+grosor de fuente: negrita;
+color: #57606f;
+cursor: puntero;
+transición: todos 0,2s;
+}
+
+.btn-small:hover {
+fondo: #dfe4ea;
+}
+
+/*Mascota Luli*/
+.luli-box {
+fondo: gradiente lineal(135 grados, #f3e7e9 0%, #e3eeff 100%);
+borde: 3px sólido #d2b4de;
+radio de borde: 20px;
+relleno: 12px 15px;
+pantalla: flexible;
+alinear-elementos: centro;
+espacio: 12px;
+margen inferior: 18px;
+cursor: puntero;
+transición: transformación 0,2s;
+alineación de texto: izquierda;
+}
+
+.luli-box:active {
+transformar: escala(0,97);
+}
+
+.luli-avatar {
+tamaño de fuente: 2,8em;
+animación: rebote 2s infinito de entrada y salida suave;
+flex-shrink: 0;
+}
+
+.luli-speech {
+tamaño de fuente: 1em;
+grosor de fuente: 600;
+color: #4a235a;
+interlineado: 1,3;
+}
+
+/* Barra de progreso y estrellas */
+.progress-wrapper {
+margen: 15px 0;
+}
+
+.encabezado-progreso {
+pantalla: flexible;
+justificar-contenido: espacio-entre;
+grosor de fuente: negrita;
+tamaño de fuente: 1.1em;
+margen inferior: 6px;
+color: #2f3542;
+}
+
+.contenedor-barra-de-progreso {
+ancho: 100%;
+altura: 28px;
+fondo: #dfe4ea;
+radio de borde: 15px;
+desbordamiento: oculto;
+box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+borde: 2px sólido #ced6e0;
+}
+
+.progress-fill {
+altura: 100%;
+fondo: gradiente lineal(90deg, #2ed573, #7bed9f);
+ancho: 0%;
+transición: ancho 0,5s cubic-bezier(0,34, 1,56, 0,64, 1);
+radio de borde: 12px;
+}
+
+.contenedor-estrellas {
+tamaño de fuente: 2,1em;
+margen: 12px 0;
+pantalla: flexible;
+justificar-contenido: centro;
+espacio: 6px;
+flex-wrap: envoltura;
+}
+
+.estrella {
+color: #dfe4ea;
+transición: transformación 0,4 s, color 0,4 s;
+filtro: drop-shadow(0 2px 3px rgba(0,0,0,0.1));
+}
+
+.estrella.ganada {
+color: #ffa502;
+animación: starPop 0.5s de facilidad;
+filtro: drop-shadow(0 0 8px rgba(255, 165, 2, 0.6));
+}
+
+/* Tarjetas de tareas */
+.task-grid {
+pantalla: flexible;
+flex-direction: columna;
+espacio: 12px;
+margen superior: 15px;
+}
+
+.tarjeta-de-tarea {
+fondo: blanco;
+borde: 3px sólido #dfe4ea;
+relleno: 15px 18px;
+radio de borde: 20px;
+cursor: puntero;
+pantalla: flexible;
+alinear-elementos: centro;
+justificar-contenido: espacio-entre;
+transición: todos 0,25 s de facilidad;
+box-shadow: 0 5px 10px rgba(0,0,0,0.04);
+}
+
+.task-card:active {
+transformar: escala(0,97);
+}
+
+.tarea-izquierda {
+pantalla: flexible;
+alinear-elementos: centro;
+espacio: 15px;
+alineación de texto: izquierda;
+}
+
+.emoji-tarea {
+tamaño de fuente: 2,2em;
+ancho: 48px;
+altura: 48px;
+pantalla: flexible;
+alinear-elementos: centro;
+justificar-contenido: centro;
+fondo: #f1f2f6;
+radio de borde: 14px;
+flex-shrink: 0;
+}
+
+.task-title {
+tamaño de fuente: 1,3em;
+grosor de fuente: negrita;
+color: #2f3542;
+}
+
+.subtítulo-tarea {
+tamaño de fuente: 0,85em;
+color: #747d8c;
+margen superior: 2px;
+}
+
+.checkbox-circle {
+ancho: 36px;
+altura: 36px;
+borde: 3px sólido #ced6e0;
+radio de borde: 50%;
+fondo: blanco;
+pantalla: flexible;
+alinear-elementos: centro;
+justificar-contenido: centro;
+tamaño de fuente: 1,4em;
+color: transparente;
+flex-shrink: 0;
+transición: todos 0,3s;
+}
+
+.task-card.completed {
+fondo: gradiente lineal(135 grados, #2ed573 0%, #1dd1a1 100%);
+color del borde: #10ac84;
+color: blanco;
+transformar: translateY(-2px);
+box-shadow: 0 8px 15px rgba(46, 213, 115, 0.3);
+}
+
+.task-card.completed .task-title {
+color: blanco;
+decoración de texto: tachado;
+}
+
+.task-card.completed .task-subtitle {
+color: #e8f8f5;
+}
+
+.task-card.completed .task-emoji {
+fondo: rgba(255,255,255,0.25);
+}
+
+.task-card.completed .checkbox-circle {
+color del borde: blanco;
+fondo: blanco;
+color: #10ac84;
+grosor de fuente: negrita;
+}
+
+/* Pantalla de Configuración (Padres) */
+#setup-screen { display: none; }
+#app-screen { display: block; }
+#pantalla-de-trofeo { mostrar: ninguno; }
+
+.selector-de-tema {
+pantalla: flexible;
+espacio: 8px;
+flex-wrap: envoltura;
+justificar-contenido: centro;
+margen: 15px 0;
+}
+
+.theme-btn {
+fondo: #f1f2f6;
+borde: 2px sólido #dfe4ea;
+radio de borde: 14px;
+relleno: 8px 12px;
+tamaño de fuente: 0,95em;
+cursor: puntero;
+grosor de fuente: negrita;
+transición: todos 0,2s;
+}
+
+.theme-btn.active {
+fondo: var(--purple);
+color: blanco;
+color del borde: #8e44ad;
+}
+
+.input-group {
+pantalla: flexible;
+espacio: 8px;
+margen: 15px 0;
+}
+
+entrada[tipo="texto"] {
+flex: 1;
+relleno: 12px 15px;
+tamaño de fuente: 1em;
+borde: 2px sólido #dfe4ea;
+radio de borde: 12px;
+esquema: ninguno;
+}
+
+entrada[tipo="texto"]:enfoque {
+color del borde: var(--primary);
+}
+
+.btn-main {
+ancho: 100%;
+relleno: 15px;
+tamaño de fuente: 1.2em;
+grosor de fuente: negrita;
+borde: ninguno;
+radio de borde: 16px;
+cursor: puntero;
+margen superior: 12px;
+color: blanco;
+fondo: var(--secundario);
+box-shadow: 0 5px 15px rgba(46, 213, 115, 0.4);
+}
+
+.btn-restore {
+fondo: #ffa502;
+box-shadow: 0 5px 15px rgba(255, 165, 2, 0.3);
+tamaño de fuente: 1em;
+relleno: 12px;
+}
+
+#configuración-lista-de-tareas {
+estilo de lista: ninguno;
+relleno: 0;
+margen: 15px 0;
+altura máxima: 320px;
+desbordamiento-y: automático;
+}
+
+#configuración-lista-de-tareas li {
+fondo: #f8f9fa;
+borde: 2px sólido #e9ecef;
+margen: 8px 0;
+relleno: 10px 12px;
+radio de borde: 12px;
+pantalla: flexible;
+justificar-contenido: espacio-entre;
+alinear-elementos: centro;
+grosor de fuente: negrita;
+}
+
+.setup-actions {
+pantalla: flexible;
+espacio: 6px;
+}
+
+.icono-btn {
+fondo: #dfe4ea;
+borde: ninguno;
+radio de borde: 8px;
+relleno: 6px 10px;
+cursor: puntero;
+grosor de fuente: negrita;
+}
+
+.icono-btn.eliminar {
+fondo: #ff4757;
+color: blanco;
+}
+
+/* Pantalla Trofeo */
+.trophy-icon {
+tamaño de fuente: 7,5em;
+margen: 15px 0;
+animación: float 2s infinite ease-in-out;
+filtro: drop-shadow(0 10px 15px rgba(255, 165, 2, 0.4));
+}
+
+.poem-box {
+fondo: #fff9db;
+borde: 3px punteado #fcc419;
+radio de borde: 20px;
+relleno: 18px;
+margen: 20px 0;
+tamaño de fuente: 1,15em;
+interlineado: 1,5;
+color: #5c4033;
+grosor de fuente: 600;
+}
+
+/* Lienzo de confeti */
+#confetti-canvas {
+posición: fija;
+superior: 0;
+izquierda: 0;
+ancho: 100vw;
+altura: 100vh;
+eventos de puntero: ninguno;
+Índice z: 999;
+}
+
+@keyframes starPop {
+0% { transformar: escala(1); }
+50% { transformar: escala(1.4) rotar(15 grados); }
+100% { transformar: escala(1) rotar(0); }
+}
+
+@keyframes float {
+0%, 100% { transformar: traducirY(0); }
+50% { transform: translateY(-15px); }
+}
+
+@keyframes rebote {
+0%, 100% { transformar: traducirY(0); }
+50% { transform: translateY(-5px); }
+}
+</style>
+</head>
+<cuerpo>
+
+<canvas id="confetti-canvas"></canvas>
+
+<div class="container">
+<!-- PANTALLA PRINCIPAL DE DANIELLA -->
+<div id="app-screen">
+<div class="top-controls">
+<button class="btn-small" onclick="openSetup()">⚙️ Configurar</button>
+<button class="btn-small" onclick="toggleSound()" id="soundBtn">🔊 Voz: ON</button>
+<button class="btn-small" onclick="resetMorningProgress()">🔄 Reiniciar día</button>
+</div>
+
+<h1>¡Buenos días, Daniella! ☀️</h1>
+<h2 id="themeSubtitle">Tus misiones de esta mañana</h2>
+
+<!-- Mascota Luli -->
+<div class="luli-box" onclick="luliSpeakRandom()">
+<div class="luli-avatar">🦄</div>
+<div class="luli-speech" id="luliText">
+¡Hola Daniella! Toca cada misión cuando la termines para ganar todas las estrellas 🌟
+</div>
+</div>
+
+<!-- Barra de Progreso -->
+<div class="progress-wrapper">
+<div class="progress-header">
+<span>Progreso</span>
+<span id="progressPercent">0%</span>
+</div>
+<div class="progress-bar-container">
+<div class="progress-fill" id="progressFill"></div>
+</div>
+</div>
+
+<!-- Estrellas -->
+<div class="stars-container" id="starsContainer"></div>
+
+<!-- Lista de Tareas -->
+<div class="task-grid" id="taskGrid"></div>
+</div>
+
+<!-- PANTALLA DE CONFIGURACIÓN (PADRES) -->
+<div id="setup-screen">
+<h1>⚙️ Zona de Padres</h1>
+<h2>Configura o personaliza la rutina de Daniella</h2>
+
+<div>
+<strong>✨ Modo de Fantasía:</strong>
+<div class="theme-selector">
+<button class="theme-btn active" onclick="setTheme('normal', this)">☀️ Normal</button>
+<button class="theme-btn" onclick="setTheme('princesa', this)">👑 Princesa</button>
+<button class="theme-btn" onclick="setTheme('superheroina', this)">🦸‍♀️ Superheroína</button>
+<button class="theme-btn" onclick="setTheme('astronauta', this)">🚀 Astronauta</button>
+</div>
+</div>
+
+<div class="input-group">
+<input type="text" id="taskInput" placeholder="Añadir otra tarea... (ej: Ponerse el abrigo 🧥)" onkeypress="if(event.key==='Enter') addTask()">
+<button class="btn-small" style="background:#1e90ff; color:white; border:none;" onclick="addTask()">+ Agregar</button>
+</div>
+
+<ul id="task-list-setup"></ul>
+
+<button class="btn-main btn-restore" onclick="restoreDefaultRoutine()">⭐ Restaurar las 9 tareas principales</button>
+<button class="btn-main" onclick="closeSetup()">¡Listo! Volver con Daniella 🚀</button>
+</div>
+
+<!-- PANTALLA DEL TROFEO (100%) -->
+<div id="trophy-screen">
+<h1>¡Reto Superado, Daniella! 🎉</h1>
+<div class="trophy-icon">🏆</div>
+<h2>¡Has conseguido las 9 estrellas de la mañana!</h2>
+
+<div class="poem-box" id="victoryPoem">
+¡Ropa lista, cara limpia y mochila en su lugar,<br>
+la campeona Daniella ya está lista para brillar!<br>
+Con tus 9 estrellas doradas hoy te vas a divertir,<br>
+¡Que tengas un día mágico y muy feliz! 🌟🎒✨
+</div>
+
+<button class="btn-main" style="background:#9b59b6;" onclick="speakVictory()">🔊 Escuchar felicitación</button>
+<button class="btn-main" onclick="resetMorningProgress()">🔄 Empezar una nueva mañana</button>
+</div>
+</div>
+
+<script>
+// 1. RUTINA PRINCIPAL PREDETERMINADA (Las 9 tareas exactas)
+const RUTINA_PREDETERMINADA = [
+{ id: 'levantarse', text: 'Levantarse de cama', emoji: '🛏️', completado: false },
+{ id: 'desayunar', texto: 'Desayunar', emoji: '🥣', completado: falso },
+{ id: 'pis', texto: 'Hacer pis', emoji: '🚽', completado: falso },
+{ id: 'dientes', text: 'Lavar los dientes', emoji: '🪥', completado: false },
+{ id: 'cara', texto: 'Lavar la cara', emoji: '🧼', completado: false },
+{ id: 'vestirse', texto: 'Vestirse', emoji: '👗', completado: falso },
+{ id: 'peinarse', texto: 'Peinarse', emoji: '🪮', completado: falso },
+{ id: 'mochila', text: 'Coger la mochila', emoji: '🎒', completado: false },
+{ id: 'cole', text: '¡Y al cole!', emoji: '🏫', completed: false }
+];
+
+// Subtítulos mágicos por temática para cada una de las 9 tareas
+const DESCRIPCIONES_DEL_TEMA = {
+normal: {},
+princesa: {
+levantarse: 'Despertar en el gran castillo real 🏰',
+desayunar: 'Tomar el banquete mágico del reino 🥐',
+pis: 'Pasar por el tocador de cristal ✨',
+dientes: 'Dar brillo de diamante a la sonrisa 💎',
+cara: 'Refrescarse con gotas de rocío 🌸',
+vestirse: 'Ponerse el vestido real de aventuras 👑',
+peinarse: 'Peinar la melena con el cepillo encantado ✨',
+mochila: 'Guardar los tesoros en el bolso real 🎒',
+cole: 'Subir a la carroza rumbo al cole 🦄'
+},
+superheroína: {
+levantarse: 'Activar energía en la base secreta ⚡',
+desayunar: 'Recargar superpoderes al máximo 🔋',
+pis: 'Parada técnica antes de despegar 🚀',
+dientes: 'Escudo láser anticaries activado 🛡️',
+cara: 'Visión clara de superheroína 💦',
+vestirse: 'Ponerse el supertraje protector 🦸‍♀️',
+peinarse: 'Peinado aerodinámico supersónico 💨',
+mochila: 'Equipar la mochila de herramientas 🎒',
+cole: '¡Volar hacia el cuartel del cole! 🌟'
+},
+astronauta: {
+levantarse: 'Salir de la cápsula espacial de sueño 🛸',
+desayunar: 'Combustible estelar para el viaje 🪐',
+pis: 'Revisión en la estación orbital 🛰️',
+dientes: 'Limpieza lunar de dientes brillantes 🌙',
+cara: 'Fresco de nebulosa espacial 💧',
+vestirse: 'Colocarse el traje espacial 👩‍🚀',
+peinarse: 'Preparar el casco intergaláctico ✨',
+mochila: 'Cargar el propulsor en la espalda 🎒',
+cole: '¡3, 2, 1... Despegue hacia el cole! 🚀'
+}
+};
+
+sea ​​tareas = [];
+let currentTheme = 'normal';
+let soundEnabled = true;
+sea ​​audioCtx = null;
+
+// Inicializar al abrir
+window.onload = () => {
+const saved = localStorage.getItem('daniella_tasks_v2');
+si (guardado) {
+tareas = JSON.parse(guardado);
+} demás {
+tareas = JSON.parse(JSON.stringify(RUTINA_PREDETERMINADA));
+guardarTareas();
+}
+renderApp();
+};
+
+función saveTasks() {
+localStorage.setItem('daniella_tasks_v2', JSON.stringify(tasks));
+}
+
+// Sonidos con Web Audio API
+función initAudio() {
+si (!audioCtx) {
+audioCtx = nuevo (window.AudioContext || window.webkitAudioContext)();
+}
+}
+
+función reproducirSonidoEstrella(stepIndex) {
+si (!soundEnabled) regresar;
+initAudio();
+const ahora = audioCtx.currentTime;
+const osc = audioCtx.createOscillator();
+const gain = audioCtx.createGain();
+const notas = [523.25, 587.33, 659.25, 698.46, 783.99, 880.00, 987.77, 1046.50, 1174.66];
+const freq = notes[stepIndex % notes.length];
+
+osc.type = 'triangle';
+osc.frequency.setValueAtTime(freq, now);
+osc.frequency.exponentialRampToValueAtTime(freq * 1.25, now + 0.18);
+
+ganancia.ganancia.establecerValorEnTiempo(0.25, ahora);
+ganancia.ganancia.rampaexponencialalvalorentiempo(0.001, ahora + 0.35);
+
+osc.connect(ganancia);
+ganancia.conectar(audioCtx.destino);
+osc.start(ahora);
+osc.stop(ahora + 0.35);
+}
+
+función reproducirFanfarriaDeVictoria() {
+si (!soundEnabled) regresar;
+initAudio();
+const notas = [523.25, 659.25, 783.99, 1046.50];
+notas.forEach((freq, idx) => {
+const now = audioCtx.currentTime + idx * 0.14;
+const osc = audioCtx.createOscillator();
+const gain = audioCtx.createGain();
+osc.type = 'sine';
+osc.frequency.setValueAtTime(freq, now);
+ganancia.ganancia.establecerValorEnTiempo(0.3, ahora);
+ganancia.ganancia.rampaexponencialalvalorentiempo(0.001, ahora + 0.4);
+osc.connect(ganancia);
+ganancia.conectar(audioCtx.destino);
+osc.start(ahora);
+osc.stop(ahora + 0.4);
+});
+}
+
+// Voz en español (SpeechSynthesis)
+función hablar(texto) {
+Si (!soundEnabled || !('speechSynthesis' en window)) regresar;
+ventana.síntesisDeVoz.cancelar();
+const enunciado = new SpeechSynthesisUtterance(texto);
+enunciado.lang = 'es-ES';
+tasa de enunciados = 1,02;
+tono de enunciado = 1.2;
+ventana.síntesisDeVoz.hablar(enunciado);
+}
+
+función alternarSonido() {
+sonidoHabilitado = !sonidoHabilitado;
+document.getElementById('soundBtn').textContent = soundEnabled ? '🔊 Voz: ON' : '🔇 Voz: OFF';
+Si (!soundEnabled && 'speechSynthesis' en window) {
+ventana.síntesisDeVoz.cancelar();
+}
+}
+
+// Renderizar Pantalla Principal
+función renderApp() {
+const completedCount = tasks.filter(t => t.completed).length;
+const total = tareas.longitud;
+const pct = total > 0 ? Math.round((completedCount / total) * 100) : 0;
+
+document.getElementById('progressFill').style.width = `${pct}%`;
+document.getElementById('progressPercent').textContent = `${pct}%`;
+
+// Estrellas
+const starsContainer = document.getElementById('starsContainer');
+starsContainer.innerHTML = tasks.map((_, i) =>
+`<span class="star ${i < completedCount ? 'earned' : ''}">★</span>`
+).unirse('');
+
+// Tarjetas de tareas
+const grid = document.getElementById('taskGrid');
+cuadrícula.innerHTML = '';
+tareas.forEach((tarea, índice) => {
+const subTexto = (DESCRIPCIONES_DEL_TEMA[tema_actual] && DESCRIPCIONES_DEL_TEMA[tema_actual][ task.id ]) || '';
+cuadrícula.innerHTML += `
+<div class="task-card ${task.completed ? 'completed' : ''}" onclick="toggleTask(${index})">
+<div class="task-left">
+<div class="task-emoji">${task.emoji || '⭐'}</div>
+<div>
+<div class="task-title">${task.text}</div>
+${subText ? `<div class="task-subtitle">${subText}</div>` : ''}
+</div>
+</div>
+<div class="checkbox-circle">✓</div>
+</div>
+`;
+});
+}
+
+función alternarTarea(índice) {
+tareas[índice].completadas = !tareas[índice].completadas;
+guardarTareas();
+
+const completedCount = tasks.filter(t => t.completed).length;
+const total = tareas.longitud;
+
+si (tasks[index].completed) {
+reproducirSonidoEstrella(contadorCompletado - 1);
+const restante = total - completado;
+sea ​​frase = '';
+
+si (restante === 0) {
+frase = `¡Increíble Daniella! ¡Has terminado todas las misiones y vamos al cole!`;
+} else if (restante === 1) {
+frase = `¡Muy bien Daniella! ¡Solo te falta una estrella para ganar el trofeo!`;
+} demás {
+frase = `¡Súper bien! "${tareas[index].text}" completado. ¡Ya tienes ${completedCount} estrellas!`;
+}
+
+document.getElementById('luliText').textContent = frase;
+hablar(frase);
+}
+
+renderApp();
+
+// Si llega al 100%
+si (completedCount === total && total > 0) {
+setTimeout(() => {
+document.getElementById('app-screen').style.display = 'none';
+document.getElementById('trophy-screen').style.display = 'block';
+reproducirFanfarria de victoria();
+lanzarConfeti();
+}, 650);
+}
+}
+
+función luliSpeakRandom() {
+frases constantes = [
+"¡Tú puedes Daniella! Cada misión te da una estrella brillante 🌟",
+"¡Qué mayor eres Daniella! Lo estás haciendo fenomenal 🦄",
+"¡Cuando consigas todas las estrellas desbloquearás la gran copa dorada! 🏆"
+];
+const randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
+document.getElementById('luliText').textContent = randomPhrase;
+hablar(frasealeatoria);
+}
+
+función speakVictory() {
+hablar("¡Felicidades campeona Daniella! Ropa lista, cara limpia y mochila en su lugar, ¡ya estás lista para brillar en el cole!");
+}
+
+función resetMorningProgress() {
+tareas.forEach(t => t.completed = false);
+guardarTareas();
+document.getElementById('trophy-screen').style.display = 'none';
+document.getElementById('app-screen').style.display = 'block';
+document.getElementById('luliText').textContent = '¡Nuevo día, Daniella! ¿Empezamos por levantarnos de la cama? ☀️';
+renderApp();
+}
+
+// Configuración de Padres
+función openSetup() {
+document.getElementById('app-screen').style.display = 'none';
+document.getElementById('setup-screen').style.display = 'block';
+renderSetupList();
+}
+
+función closeSetup() {
+document.getElementById('setup-screen').style.display = 'none';
+document.getElementById('app-screen').style.display = 'block';
+renderApp();
+}
+
+función setTheme(theme, btn) {
+TemaActual = tema;
+document.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('active'));
+btn.classList.add('active');
+
+const títulos = {
+normal: 'Tus misiones de esta mañana',
+princesa: '👑 Misiones del Castillo Real',
+superheroina: '🦸‍♀️ Entrenamiento de Superheroína',
+astronauta: '🚀 Misión Espacial Matutina'
+};
+document.getElementById('themeSubtitle').textContent = titles[theme];
+}
+
+función detectarEmoji(texto) {
+const lower = texto.toLowerCase();
+if (lower.includes('cama') || lower.includes('levantar')) return '🛏️';
+if (lower.includes('desayun') || lower.includes('leche')) return '🥣';
+if (lower.includes('pis') || lower.includes('baño')) return '🚽';
+if (lower.includes('diente')) return '🪥';
+if (lower.includes('cara') || lower.includes('agua')) return '🧼';
+if (lower.includes('vestir') || lower.includes('ropa')) return '👗';
+if (lower.includes('pein') || lower.includes('pelo')) return '🪮';
+if (lower.includes('mochila')) return '🎒';
+if (lower.includes('cole')) return '🏫';
+if (lower.includes('zapato')) return '👟';
+devolver '⭐';
+}
+
+función addTask() {
+const input = document.getElementById('taskInput');
+const val = input.value.trim();
+si (!val) regresar;
+tareas.push({
+id: 'custom_' + Date.now(),
+texto: val,
+emoji: detectarEmoji(val),
+completado: falso
+});
+valor de entrada = '';
+guardarTareas();
+renderSetupList();
+}
+
+función removeTask(índice) {
+tareas.splice(índice, 1);
+guardarTareas();
+renderSetupList();
+}
+
+función moveTask(índice, directorio) {
+const nuevoÍndice = índice + directorio;
+Si (newIndex < 0 || newIndex >= tasks.length) regresar;
+const temp = tasks[index];
+tareas[índice] = tareas[nuevoíndice];
+tareas[nuevoÍndice] = temp;
+guardarTareas();
+renderSetupList();
+}
+
+función restoreDefaultRoutine() {
+tareas = JSON.parse(JSON.stringify(RUTINA_PREDETERMINADA));
+guardarTareas();
+renderSetupList();
+}
+
+función renderSetupList() {
+const ul = document.getElementById('task-list-setup');
+ul.innerHTML = '';
+tareas.forEach((tarea, índice) => {
+ul.innerHTML += `
+<li>
+<span>${task.emoji} ${task.text}</span>
+<div class="setup-actions">
+<button class="icon-btn" onclick="moveTask(${index}, -1)">↑</button>
+<button class="icon-btn" onclick="moveTask(${index}, 1)">↓</button>
+<button class="icon-btn delete" onclick="removeTask(${index})">✕</button>
+</div>
+</li>
+`;
+});
+}
+
+// Lluvia de confeti al ganar el trofeo
+función launchConfetti() {
+const canvas = document.getElementById('confetti-canvas');
+const ctx = canvas.getContext('2d');
+ancho del lienzo = ancho interior de la ventana;
+lienzo.altura = ventana.alturainterior;
+
+const pieces = Array.from({ length: 90 }, () => ({
+x: Math.random() * canvas.width,
+y: Math.random() * canvas.height - canvas.height,
+tamaño: Math.random() * 8 + 5,
+speedY: Math.random() * 4 + 2,
+velocidadX: (Math.random() - 0.5) * 3,
+color: ['#ff6b81', '#2ed573', '#ffa502', '#1e90ff', '#a55eea'][Math.floor(Math.random() * 5)]
+}));
+
+sea ​​frames = 0;
+función animar() {
+ctx.clearRect(0, 0, canvas.width, canvas.height);
+piezas.forEach(p => {
+py += p.speedY;
+px += p.speedX;
+ctx.fillStyle = p.color;
+ctx.fillRect(px, py, p.size, p.size);
+});
+fotogramas++;
+si (fotogramas < 180) {
+requestAnimationFrame(animate);
+} demás {
+ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+}
+animar();
+}
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Misiones de Daniella ✨</title>
+<style>
+:raíz {
+--primario: #ff6b81;
+--primary-dark: #ff4757;
+--secundario: #2ed573;
+--acento: #ffa502;
+--púrpura: #9b59b6;
+--bg-gradient: gradiente lineal(135 grados, #fdfbfb 0%, #ebedee 100%);
+--card-bg: #ffffff;
+--texto: #2f3542;
+}
+
+* {
+box-size: border-box;
+selección del usuario: ninguna;
+-webkit-tap-highlight-color: transparente;
+}
+
+cuerpo {
+familia de fuentes: 'Segoe UI', 'Comic Sans MS', Tahoma, sans-serif;
+fondo: gradiente lineal(135 grados, #ff9a9e 0%, #fecfef 50%, #a1c4fd 100%);
+altura mínima: 100vh;
+color: var(--text);
+alineación de texto: centro;
+margen: 0;
+relleno: 15px;
+desbordamiento-x: oculto;
+}
+
+.contenedor {
+ancho máximo: 540px;
+margen: 0 automático;
+fondo: rgba(255, 255, 255, 0.95);
+relleno: 25px 20px;
+radio de borde: 28px;
+box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+posición: relativa;
+filtro de fondo: desenfoque (10px);
+}
+
+h1 {
+color: var(--primary-dark);
+tamaño de fuente: 2em;
+margen: 0 0 5px 0;
+text-shadow: 1px 1px 0px #ffeaa7;
+}
+
+h2 {
+color: #57606f;
+tamaño de fuente: 1.1em;
+margen superior: 0;
+grosor de fuente: 600;
+}
+
+/* Barra superior */
+.controles-superiores {
+pantalla: flexible;
+justificar-contenido: espacio-entre;
+alinear-elementos: centro;
+margen inferior: 15px;
+}
+
+.btn-small {
+fondo: #f1f2f6;
+borde: 2px sólido #dfe4ea;
+radio de borde: 12px;
+relleno: 8px 12px;
+tamaño de fuente: 0,9em;
+grosor de fuente: negrita;
+color: #57606f;
+cursor: puntero;
+transición: todos 0,2s;
+}
+
+.btn-small:hover {
+fondo: #dfe4ea;
+}
+
+/*Mascota Luli*/
+.luli-box {
+fondo: gradiente lineal(135 grados, #f3e7e9 0%, #e3eeff 100%);
+borde: 3px sólido #d2b4de;
+radio de borde: 20px;
+relleno: 12px 15px;
+pantalla: flexible;
+alinear-elementos: centro;
+espacio: 12px;
+margen inferior: 18px;
+cursor: puntero;
+transición: transformación 0,2s;
+alineación de texto: izquierda;
+}
+
+.luli-box:active {
+transformar: escala(0,97);
+}
+
+.luli-avatar {
+tamaño de fuente: 2,8em;
+animación: rebote 2s infinito de entrada y salida suave;
+flex-shrink: 0;
+}
+
+.luli-speech {
+tamaño de fuente: 1em;
+grosor de fuente: 600;
+color: #4a235a;
+interlineado: 1,3;
+}
+
+/* Barra de progreso y estrellas */
+.progress-wrapper {
+margen: 15px 0;
+}
+
+.encabezado-progreso {
+pantalla: flexible;
+justificar-contenido: espacio-entre;
+grosor de fuente: negrita;
+tamaño de fuente: 1.1em;
+margen inferior: 6px;
+color: #2f3542;
+}
+
+.contenedor-barra-de-progreso {
+ancho: 100%;
+altura: 28px;
+fondo: #dfe4ea;
+radio de borde: 15px;
+desbordamiento: oculto;
+box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+borde: 2px sólido #ced6e0;
+}
+
+.progress-fill {
+altura: 100%;
+fondo: gradiente lineal(90deg, #2ed573, #7bed9f);
+ancho: 0%;
+transición: ancho 0,5s cubic-bezier(0,34, 1,56, 0,64, 1);
+radio de borde: 12px;
+}
+
+.contenedor-estrellas {
+tamaño de fuente: 2,1em;
+margen: 12px 0;
+pantalla: flexible;
+justificar-contenido: centro;
+espacio: 6px;
+flex-wrap: envoltura;
+}
+
+.estrella {
+color: #dfe4ea;
+transición: transformación 0,4 s, color 0,4 s;
+filtro: drop-shadow(0 2px 3px rgba(0,0,0,0.1));
+}
+
+.estrella.ganada {
+color: #ffa502;
+animación: starPop 0.5s de facilidad;
+filtro: drop-shadow(0 0 8px rgba(255, 165, 2, 0.6));
+}
+
+/* Tarjetas de tareas */
+.task-grid {
+pantalla: flexible;
+flex-direction: columna;
+espacio: 12px;
+margen superior: 15px;
+}
+
+.tarjeta-de-tarea {
+fondo: blanco;
+borde: 3px sólido #dfe4ea;
+relleno: 15px 18px;
+radio de borde: 20px;
+cursor: puntero;
+pantalla: flexible;
+alinear-elementos: centro;
+justificar-contenido: espacio-entre;
+transición: todos 0,25 s de facilidad;
+box-shadow: 0 5px 10px rgba(0,0,0,0.04);
+}
+
+.task-card:active {
+transformar: escala(0,97);
+}
+
+.tarea-izquierda {
+pantalla: flexible;
+alinear-elementos: centro;
+espacio: 15px;
+alineación de texto: izquierda;
+}
+
+.emoji-tarea {
+tamaño de fuente: 2,2em;
+ancho: 48px;
+altura: 48px;
+pantalla: flexible;
+alinear-elementos: centro;
+justificar-contenido: centro;
+fondo: #f1f2f6;
+radio de borde: 14px;
+flex-shrink: 0;
+}
+
+.task-title {
+tamaño de fuente: 1,3em;
+grosor de fuente: negrita;
+color: #2f3542;
+}
+
+.subtítulo-tarea {
+tamaño de fuente: 0,85em;
+color: #747d8c;
+margen superior: 2px;
+}
+
+.checkbox-circle {
+ancho: 36px;
+altura: 36px;
+borde: 3px sólido #ced6e0;
+radio de borde: 50%;
+fondo: blanco;
+pantalla: flexible;
+alinear-elementos: centro;
+justificar-contenido: centro;
+tamaño de fuente: 1,4em;
+color: transparente;
+flex-shrink: 0;
+transición: todos 0,3s;
+}
+
+.task-card.completed {
+fondo: gradiente lineal(135 grados, #2ed573 0%, #1dd1a1 100%);
+color del borde: #10ac84;
+color: blanco;
+transformar: translateY(-2px);
+box-shadow: 0 8px 15px rgba(46, 213, 115, 0.3);
+}
+
+.task-card.completed .task-title {
+color: blanco;
+decoración de texto: tachado;
+}
+
+.task-card.completed .task-subtitle {
+color: #e8f8f5;
+}
+
+.task-card.completed .task-emoji {
+fondo: rgba(255,255,255,0.25);
+}
+
+.task-card.completed .checkbox-circle {
+color del borde: blanco;
+fondo: blanco;
+color: #10ac84;
+grosor de fuente: negrita;
+}
+
+/* Pantalla de Configuración (Padres) */
+#setup-screen { display: none; }
+#app-screen { display: block; }
+#pantalla-de-trofeo { mostrar: ninguno; }
+
+.selector-de-tema {
+pantalla: flexible;
+espacio: 8px;
+flex-wrap: envoltura;
+justificar-contenido: centro;
+margen: 15px 0;
+}
+
+.theme-btn {
+fondo: #f1f2f6;
+borde: 2px sólido #dfe4ea;
+radio de borde: 14px;
+relleno: 8px 12px;
+tamaño de fuente: 0,95em;
+cursor: puntero;
+grosor de fuente: negrita;
+transición: todos 0,2s;
+}
+
+.theme-btn.active {
+fondo: var(--purple);
+color: blanco;
+color del borde: #8e44ad;
+}
+
+.input-group {
+pantalla: flexible;
+espacio: 8px;
+margen: 15px 0;
+}
+
+entrada[tipo="texto"] {
+flex: 1;
+relleno: 12px 15px;
+tamaño de fuente: 1em;
+borde: 2px sólido #dfe4ea;
+radio de borde: 12px;
+esquema: ninguno;
+}
+
+entrada[tipo="texto"]:enfoque {
+color del borde: var(--primary);
+}
+
+.btn-main {
+ancho: 100%;
+relleno: 15px;
+tamaño de fuente: 1.2em;
+grosor de fuente: negrita;
+borde: ninguno;
+radio de borde: 16px;
+cursor: puntero;
+margen superior: 12px;
+color: blanco;
+fondo: var(--secundario);
+box-shadow: 0 5px 15px rgba(46, 213, 115, 0.4);
+}
+
+.btn-restore {
+fondo: #ffa502;
+box-shadow: 0 5px 15px rgba(255, 165, 2, 0.3);
+tamaño de fuente: 1em;
+relleno: 12px;
+}
+
+#configuración-lista-de-tareas {
+estilo de lista: ninguno;
+relleno: 0;
+margen: 15px 0;
+altura máxima: 320px;
+desbordamiento-y: automático;
+}
+
+#configuración-lista-de-tareas li {
+fondo: #f8f9fa;
+borde: 2px sólido #e9ecef;
+margen: 8px 0;
+relleno: 10px 12px;
+radio de borde: 12px;
+pantalla: flexible;
+justificar-contenido: espacio-entre;
+alinear-elementos: centro;
+grosor de fuente: negrita;
+}
+
+.setup-actions {
+pantalla: flexible;
+espacio: 6px;
+}
+
+.icono-btn {
+fondo: #dfe4ea;
+borde: ninguno;
+radio de borde: 8px;
+relleno: 6px 10px;
+cursor: puntero;
+grosor de fuente: negrita;
+}
+
+.icono-btn.eliminar {
+fondo: #ff4757;
+color: blanco;
+}
+
+/* Pantalla Trofeo */
+.trophy-icon {
+tamaño de fuente: 7,5em;
+margen: 15px 0;
+animación: float 2s infinite ease-in-out;
+filtro: drop-shadow(0 10px 15px rgba(255, 165, 2, 0.4));
+}
+
+.poem-box {
+fondo: #fff9db;
+borde: 3px punteado #fcc419;
+radio de borde: 20px;
+relleno: 18px;
+margen: 20px 0;
+tamaño de fuente: 1,15em;
+interlineado: 1,5;
+color: #5c4033;
+grosor de fuente: 600;
+}
+
+/* Lienzo de confeti */
+#confetti-canvas {
+posición: fija;
+superior: 0;
+izquierda: 0;
+ancho: 100vw;
+altura: 100vh;
+eventos de puntero: ninguno;
+Índice z: 999;
+}
+
+@keyframes starPop {
+0% { transformar: escala(1); }
+50% { transformar: escala(1.4) rotar(15 grados); }
+100% { transformar: escala(1) rotar(0); }
+}
+
+@keyframes float {
+0%, 100% { transformar: traducirY(0); }
+50% { transform: translateY(-15px); }
+}
+
+@keyframes rebote {
+0%, 100% { transformar: traducirY(0); }
+50% { transform: translateY(-5px); }
+}
+</style>
+</head>
+<cuerpo>
+
+<canvas id="confetti-canvas"></canvas>
+
+<div class="container">
+<!-- PANTALLA PRINCIPAL DE DANIELLA -->
+<div id="app-screen">
+<div class="top-controls">
+<button class="btn-small" onclick="openSetup()">⚙️ Configurar</button>
+<button class="btn-small" onclick="toggleSound()" id="soundBtn">🔊 Voz: ON</button>
+<button class="btn-small" onclick="resetMorningProgress()">🔄 Reiniciar día</button>
+</div>
+
+<h1>¡Buenos días, Daniella! ☀️</h1>
+<h2 id="themeSubtitle">Tus misiones de esta mañana</h2>
+
+<!-- Mascota Luli -->
+<div class="luli-box" onclick="luliSpeakRandom()">
+<div class="luli-avatar">🦄</div>
+<div class="luli-speech" id="luliText">
+¡Hola Daniella! Toca cada misión cuando la termines para ganar todas las estrellas 🌟
+</div>
+</div>
+
+<!-- Barra de Progreso -->
+<div class="progress-wrapper">
+<div class="progress-header">
+<span>Progreso</span>
+<span id="progressPercent">0%</span>
+</div>
+<div class="progress-bar-container">
+<div class="progress-fill" id="progressFill"></div>
+</div>
+</div>
+
+<!-- Estrellas -->
+<div class="stars-container" id="starsContainer"></div>
+
+<!-- Lista de Tareas -->
+<div class="task-grid" id="taskGrid"></div>
+</div>
+
+<!-- PANTALLA DE CONFIGURACIÓN (PADRES) -->
+<div id="setup-screen">
+<h1>⚙️ Zona de Padres</h1>
+<h2>Configura o personaliza la rutina de Daniella</h2>
+
+<div>
+<strong>✨ Modo de Fantasía:</strong>
+<div class="theme-selector">
+<button class="theme-btn active" onclick="setTheme('normal', this)">☀️ Normal</button>
+<button class="theme-btn" onclick="setTheme('princesa', this)">👑 Princesa</button>
+<button class="theme-btn" onclick="setTheme('superheroina', this)">🦸‍♀️ Superheroína</button>
+<button class="theme-btn" onclick="setTheme('astronauta', this)">🚀 Astronauta</button>
+</div>
+</div>
+
+<div class="input-group">
+<input type="text" id="taskInput" placeholder="Añadir otra tarea... (ej: Ponerse el abrigo 🧥)" onkeypress="if(event.key==='Enter') addTask()">
+<button class="btn-small" style="background:#1e90ff; color:white; border:none;" onclick="addTask()">+ Agregar</button>
+</div>
+
+<ul id="task-list-setup"></ul>
+
+<button class="btn-main btn-restore" onclick="restoreDefaultRoutine()">⭐ Restaurar las 9 tareas principales</button>
+<button class="btn-main" onclick="closeSetup()">¡Listo! Volver con Daniella 🚀</button>
+</div>
+
+<!-- PANTALLA DEL TROFEO (100%) -->
+<div id="trophy-screen">
+<h1>¡Reto Superado, Daniella! 🎉</h1>
+<div class="trophy-icon">🏆</div>
+<h2>¡Has conseguido las 9 estrellas de la mañana!</h2>
+
+<div class="poem-box" id="victoryPoem">
+¡Ropa lista, cara limpia y mochila en su lugar,<br>
+la campeona Daniella ya está lista para brillar!<br>
+Con tus 9 estrellas doradas hoy te vas a divertir,<br>
+¡Que tengas un día mágico y muy feliz! 🌟🎒✨
+</div>
+
+<button class="btn-main" style="background:#9b59b6;" onclick="speakVictory()">🔊 Escuchar felicitación</button>
+<button class="btn-main" onclick="resetMorningProgress()">🔄 Empezar una nueva mañana</button>
+</div>
+</div>
+
+<script>
+// 1. RUTINA PRINCIPAL PREDETERMINADA (Las 9 tareas exactas)
+const RUTINA_PREDETERMINADA = [
+{ id: 'levantarse', text: 'Levantarse de cama', emoji: '🛏️', completado: false },
+{ id: 'desayunar', texto: 'Desayunar', emoji: '🥣', completado: falso },
+{ id: 'pis', texto: 'Hacer pis', emoji: '🚽', completado: falso },
+{ id: 'dientes', text: 'Lavar los dientes', emoji: '🪥', completado: false },
+{ id: 'cara', texto: 'Lavar la cara', emoji: '🧼', completado: false },
+{ id: 'vestirse', texto: 'Vestirse', emoji: '👗', completado: falso },
+{ id: 'peinarse', texto: 'Peinarse', emoji: '🪮', completado: falso },
+{ id: 'mochila', text: 'Coger la mochila', emoji: '🎒', completado: false },
+{ id: 'cole', text: '¡Y al cole!', emoji: '🏫', completed: false }
+];
+
+// Subtítulos mágicos por temática para cada una de las 9 tareas
+const DESCRIPCIONES_DEL_TEMA = {
+normal: {},
+princesa: {
+levantarse: 'Despertar en el gran castillo real 🏰',
+desayunar: 'Tomar el banquete mágico del reino 🥐',
+pis: 'Pasar por el tocador de cristal ✨',
+dientes: 'Dar brillo de diamante a la sonrisa 💎',
+cara: 'Refrescarse con gotas de rocío 🌸',
+vestirse: 'Ponerse el vestido real de aventuras 👑',
+peinarse: 'Peinar la melena con el cepillo encantado ✨',
+mochila: 'Guardar los tesoros en el bolso real 🎒',
+cole: 'Subir a la carroza rumbo al cole 🦄'
+},
+superheroína: {
+levantarse: 'Activar energía en la base secreta ⚡',
+desayunar: 'Recargar superpoderes al máximo 🔋',
+pis: 'Parada técnica antes de despegar 🚀',
+dientes: 'Escudo láser anticaries activado 🛡️',
+cara: 'Visión clara de superheroína 💦',
+vestirse: 'Ponerse el supertraje protector 🦸‍♀️',
+peinarse: 'Peinado aerodinámico supersónico 💨',
+mochila: 'Equipar la mochila de herramientas 🎒',
+cole: '¡Volar hacia el cuartel del cole! 🌟'
+},
+astronauta: {
+levantarse: 'Salir de la cápsula espacial de sueño 🛸',
+desayunar: 'Combustible estelar para el viaje 🪐',
+pis: 'Revisión en la estación orbital 🛰️',
+dientes: 'Limpieza lunar de dientes brillantes 🌙',
+cara: 'Fresco de nebulosa espacial 💧',
+vestirse: 'Colocarse el traje espacial 👩‍🚀',
+peinarse: 'Preparar el casco intergaláctico ✨',
+mochila: 'Cargar el propulsor en la espalda 🎒',
+cole: '¡3, 2, 1... Despegue hacia el cole! 🚀'
+}
+};
+
+sea ​​tareas = [];
+let currentTheme = 'normal';
+let soundEnabled = true;
+sea ​​audioCtx = null;
+
+// Inicializar al abrir
+window.onload = () => {
+const saved = localStorage.getItem('daniella_tasks_v2');
+si (guardado) {
+tareas = JSON.parse(guardado);
+} demás {
+tareas = JSON.parse(JSON.stringify(RUTINA_PREDETERMINADA));
+guardarTareas();
+}
+renderApp();
+};
+
+función saveTasks() {
+localStorage.setItem('daniella_tasks_v2', JSON.stringify(tasks));
+}
+
+// Sonidos con Web Audio API
+función initAudio() {
+si (!audioCtx) {
+audioCtx = nuevo (window.AudioContext || window.webkitAudioContext)();
+}
+}
+
+función reproducirSonidoEstrella(stepIndex) {
+si (!soundEnabled) regresar;
+initAudio();
+const ahora = audioCtx.currentTime;
+const osc = audioCtx.createOscillator();
+const gain = audioCtx.createGain();
+const notas = [523.25, 587.33, 659.25, 698.46, 783.99, 880.00, 987.77, 1046.50, 1174.66];
+const freq = notes[stepIndex % notes.length];
+
+osc.type = 'triangle';
+osc.frequency.setValueAtTime(freq, now);
+osc.frequency.exponentialRampToValueAtTime(freq * 1.25, now + 0.18);
+
+ganancia.ganancia.establecerValorEnTiempo(0.25, ahora);
+ganancia.ganancia.rampaexponencialalvalorentiempo(0.001, ahora + 0.35);
+
+osc.connect(ganancia);
+ganancia.conectar(audioCtx.destino);
+osc.start(ahora);
+osc.stop(ahora + 0.35);
+}
+
+función playVictoryFanfare() {
+si (!soundEnabled) regresar;
+initAudio();
+const notas = [523.25, 659.25, 783.99, 1046.50];
+notas.forEach((freq, idx) => {
+const now = audioCtx.currentTime + idx * 0.14;
+const osc = audioCtx.createOscillator();
+const gain = audioCtx.createGain();
+osc.type = 'sine';
+osc.frequency.setValueAtTime(freq, now);
+ganancia.ganancia.establecerValorEnTiempo(0.3, ahora);
+ganancia.ganancia.rampaexponencialalvalorentiempo(0.001, ahora + 0.4);
+osc.connect(ganancia);
+ganancia.conectar(audioCtx.destino);
+osc.start(ahora);
+osc.stop(ahora + 0.4);
+});
+}
+
+// Voz en español (SpeechSynthesis)
+función hablar(texto) {
+Si (!soundEnabled || !('speechSynthesis' en window)) regresar;
+ventana.síntesisDeVoz.cancelar();
+const enunciado = new SpeechSynthesisUtterance(texto);
+enunciado.lang = 'es-ES';
+tasa de enunciados = 1,02;
+tono de enunciado = 1.2;
+ventana.síntesisDeVoz.hablar(enunciado);
+}
+
+función alternarSonido() {
+sonidoHabilitado = !sonidoHabilitado;
+document.getElementById('soundBtn').textContent = soundEnabled ? '🔊 Voz: ON' : '🔇 Voz: OFF';
+Si (!soundEnabled && 'speechSynthesis' en window) {
+ventana.síntesisDeVoz.cancelar();
+}
+}
+
+// Renderizar Pantalla Principal
+función renderApp() {
+const completedCount = tasks.filter(t => t.completed).length;
+const total = tareas.longitud;
+const pct = total > 0 ? Math.round((completedCount / total) * 100) : 0;
+
+document.getElementById('progressFill').style.width = `${pct}%`;
+document.getElementById('progressPercent').textContent = `${pct}%`;
+
+// Estrellas
+const starsContainer = document.getElementById('starsContainer');
+starsContainer.innerHTML = tasks.map((_, i) =>
+`<span class="star ${i < completedCount ? 'earned' : ''}">★</span>`
+).unirse('');
+
+// Tarjetas de tareas
+const grid = document.getElementById('taskGrid');
+cuadrícula.innerHTML = '';
+tareas.forEach((tarea, índice) => {
+const subTexto = (DESCRIPCIONES_DEL_TEMA[tema_actual] && DESCRIPCIONES_DEL_TEMA[tema_actual][ task.id ]) || '';
+cuadrícula.innerHTML += `
+<div class="task-card ${task.completed ? 'completed' : ''}" onclick="toggleTask(${index})">
+<div class="task-left">
+<div class="task-emoji">${task.emoji || '⭐'}</div>
+<div>
+<div class="task-title">${task.text}</div>
+${subText ? `<div class="task-subtitle">${subText}</div>` : ''}
+</div>
+</div>
+<div class="checkbox-circle">✓</div>
+</div>
+`;
+});
+}
+
+función alternarTarea(índice) {
+tareas[índice].completadas = !tareas[índice].completadas;
+guardarTareas();
+
+const completedCount = tasks.filter(t => t.completed).length;
+const total = tareas.longitud;
+
+si (tasks[index].completed) {
+reproducirSonidoEstrella(contadorCompletado - 1);
+const restante = total - completado;
+sea ​​frase = '';
+
+si (restante === 0) {
+frase = `¡Increíble Daniella! ¡Has terminado todas las misiones y vamos al cole!`;
+} else if (restante === 1) {
+frase = `¡Muy bien Daniella! ¡Solo te falta una estrella para ganar el trofeo!`;
+} demás {
+frase = `¡Súper bien! "${tareas[index].text}" completado. ¡Ya tienes ${completedCount} estrellas!`;
+}
+
+document.getElementById('luliText').textContent = frase;
+hablar(frase);
+}
+
+renderApp();
+
+// Si llega al 100%
+si (completedCount === total && total > 0) {
+setTimeout(() => {
+document.getElementById('app-screen').style.display = 'none';
+document.getElementById('trophy-screen').style.display = 'block';
+reproducirFanfarria de victoria();
+lanzarConfeti();
+}, 650);
+}
+}
+
+función luliSpeakRandom() {
+frases constantes = [
+"¡Tú puedes Daniella! Cada misión te da una estrella brillante 🌟",
+"¡Qué mayor eres Daniella! Lo estás haciendo fenomenal 🦄",
+"¡Cuando consigas todas las estrellas desbloquearás la gran copa dorada! 🏆"
+];
+const randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
+document.getElementById('luliText').textContent = randomPhrase;
+hablar(frasealeatoria);
+}
+
+función speakVictory() {
+hablar("¡Felicidades campeona Daniella! Ropa lista, cara limpia y mochila en su lugar, ¡ya estás lista para brillar en el cole!");
+}
+
+función resetMorningProgress() {
+tareas.forEach(t => t.completed = false);
+guardarTareas();
+document.getElementById('trophy-screen').style.display = 'none';
+document.getElementById('app-screen').style.display = 'block';
+document.getElementById('luliText').textContent = '¡Nuevo día, Daniella! ¿Empezamos por levantarnos de la cama? ☀️';
+renderApp();
+}
+
+// Configuración de Padres
+función openSetup() {
+document.getElementById('app-screen').style.display = 'none';
+document.getElementById('setup-screen').style.display = 'block';
+renderSetupList();
+}
+
+función closeSetup() {
+document.getElementById('setup-screen').style.display = 'none';
+document.getElementById('app-screen').style.display = 'block';
+renderApp();
+}
+
+función setTheme(theme, btn) {
+TemaActual = tema;
+document.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('active'));
+btn.classList.add('active');
+
+const títulos = {
+normal: 'Tus misiones de esta mañana',
+princesa: '👑 Misiones del Castillo Real',
+superheroina: '🦸‍♀️ Entrenamiento de Superheroína',
+astronauta: '🚀 Misión Espacial Matutina'
+};
+document.getElementById('themeSubtitle').textContent = titles[theme];
+}
+
+función detectarEmoji(texto) {
+const lower = texto.toLowerCase();
+if (lower.includes('cama') || lower.includes('levantar')) return '🛏️';
+if (lower.includes('desayun') || lower.includes('leche')) return '🥣';
+if (lower.includes('pis') || lower.includes('baño')) return '🚽';
+if (lower.includes('diente')) return '🪥';
+if (lower.includes('cara') || lower.includes('agua')) return '🧼';
+if (lower.includes('vestir') || lower.includes('ropa')) return '👗';
+if (lower.includes('pein') || lower.includes('pelo')) return '🪮';
+if (lower.includes('mochila')) return '🎒';
+if (lower.includes('cole')) return '🏫';
+if (lower.includes('zapato')) return '👟';
+devolver '⭐';
+}
+
+función addTask() {
+const input = document.getElementById('taskInput');
+const val = input.value.trim();
+si (!val) regresar;
+tareas.push({
+id: 'custom_' + Date.now(),
+texto: val,
+emoji: detectarEmoji(val),
+completado: falso
+});
+valor de entrada = '';
+guardarTareas();
+renderSetupList();
+}
+
+función removeTask(índice) {
+tareas.splice(índice, 1);
+guardarTareas();
+renderSetupList();
+}
+
+función moveTask(índice, directorio) {
+const nuevoIndex = índice + dir;
+Si (newIndex < 0 || newIndex >= tasks.length) regresar;
+const temp = tasks[index];
+tareas[índice] = tareas[nuevoíndice];
+tareas[nuevoÍndice] = temp;
+guardarTareas();
+renderSetupList();
+}
+
+función restoreDefaultRutina() {
+tareas = JSON.parse(JSON.stringify(RUTINA_PREDETERMINADA));
+guardarTareas();
+renderSetupList();
+}
+
+función renderSetupList() {
+const ul = document.getElementById('task-list-setup');
+ul.innerHTML = '';
+tareas.forEach((tarea, índice) => {
+ul.innerHTML += `
+<li>
+<span>${task.emoji} ${task.text}</span>
+<div class="setup-actions">
+<button class="icon-btn" onclick="moveTask(${index}, -1)">↑</button>
+<button class="icon-btn" onclick="moveTask(${index}, 1)">↓</button>
+<button class="icon-btn delete" onclick="removeTask(${index})">✕</button>
+</div>
+</li>
+`;
+});
+}
+
+// Lluvia de confeti al ganar el trofeo
+función launchConfetti() {
+const canvas = document.getElementById('confetti-canvas');
+const ctx = canvas.getContext('2d');
+ancho del lienzo = ancho interior de la ventana;
+lienzo.altura = ventana.alturainterior;
+
+const pieces = Array.from({ length: 90 }, () => ({
+x: Math.random() * canvas.width,
+y: Math.random() * canvas.height - canvas.height,
+tamaño: Math.random() * 8 + 5,
+speedY: Math.random() * 4 + 2,
+velocidadX: (Math.random() - 0.5) * 3,
+color: ['#ff6b81', '#2ed573', '#ffa502', '#1e90ff', '#a55eea'][Math.floor(Math.random() * 5)]
+}));
+
+sea ​​frames = 0;
+función animar() {
+ctx.clearRect(0, 0, canvas.width, canvas.height);
+piezas.forEach(p => {
+py += p.speedY;
+px += p.speedX;
+ctx.fillStyle = p.color;
+ctx.fillRect(px, py, p.size, p.size);
+});
+fotogramas++;
+si (fotogramas < 180) {
+requestAnimationFrame(animate);
+} demás {
+ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+}
+animar();
+}
+</script>
+
+</body>
+</html>
